@@ -1,3 +1,8 @@
+---
+layout: post
+title: Etcd raft Step函数代码分析
+---
+```golang
 func (r *raft) Step(m pb.Message) error {
 	// Handle the message term, which may result in our stepping down to a follower.
 	switch {
@@ -142,3 +147,4 @@ func (r *raft) Step(m pb.Message) error {
 	}
 	return nil
 }
+```
