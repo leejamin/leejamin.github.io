@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+  	<title>Ad_Demo_Async_Multi</title>
+  	<!-- 广告投放脚本 -->
+    <script src="https://fpvideo.shenshiads.com/h5tovue/index.js"></script>
+</head>
+<body>
+    <div>媒体内容片段1</div>
+  	<!-- 广告投放代码 -->
+    <script type="text/javascript">
+      document.addEventListener('UniAppJSBridgeReady', function() {
+        // 向应用发送消息
+        uni.postMessage({
+          //  约定数据格式为data:{} data必须带否则APP收不到此信息
+            data: {
+                type: 'reward' // reward => 激励视频    inters => 插屏视频    fullScreen => 全屏视频
+            }
+        });
+      });
+  	</script>
+
+    
+</body>
+</html>
